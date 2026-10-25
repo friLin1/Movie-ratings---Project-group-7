@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dataset | Movie Ratings</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+
+        .dataset-content {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+            color: rgb(246, 246, 162);
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+        }
+
+        .dataset-content h2 {
+            font-family: "Limelight", sans-serif;
+            font-size: 32px;
+            color: rgb(255, 174, 13);
+            display: block;
+            text-align: left;
+            margin: 25px 0 10px;
+            padding: 10px 0;
+        }
+
+        .dataset-content p {
+            display: block;
+            text-align: left;
+            font-size: 18px;
+            line-height: 1.7;
+            margin: 12px 0;
+            padding: 0;
+        }
+
+        .dataset-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #701f1f;
+        }
+
+        .dataset-content th,
+        .dataset-content td {
+            border: 1px solid rgb(255, 174, 13);
+            padding: 12px;
+            text-align: left;
+            color: rgb(246, 246, 162);
+        }
+
+        .dataset-content th {
+            color: rgb(255, 174, 13);
+            background-color: #8d0a0a;
+        }
+
+        .dataset-content a {
+            color: rgb(255, 174, 13);
+        }
+
+        .dataset-content .download-link {
+            display: inline-block;
+            background-color: #c6101c;
+            border: 1px dotted yellow;
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin: 8px 8px 8px 0;
+            text-decoration: none;
+        }
+
+        .dataset-content .download-link:hover {
+            background-color: #8d0a0a;
+        }
+
+        @media (max-width: 600px) {
+            .dataset-content {
+                padding: 12px;
+            }
+
+            .dataset-content h2 {
+                font-size: 25px;
+            }
+
+            .dataset-content p {
+                font-size: 16px;
+            }
+
+            .dataset-content table {
+                font-size: 14px;
+            }
+
+            .dataset-content th,
+            .dataset-content td {
+                padding: 7px;
+                overflow-wrap: anywhere;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- The navigation bar -->
+
+    <ul id="navigation">
+        <li><a href="index.html">Homepage</a></li>
+        <li><a href="dataset.html">Dataset</a></li>
+        <li><a href="algorithm.html">Algorithm</a></li>
+        <li><a href="people.html">People</a></li>
+    </ul>
+
+    <!-- Dataset information -->
+
+    <h1>MOVIE RATINGS</h1>
+    <h2>Our Dataset</h2>
+
+    <main class="dataset-content">
+
+        <section>
+            <h2>Dataset Overview</h2>
+
+            <p>
+                Our project uses a dataset of 50 English-language films.
+                Each row represents one film, and each column describes
+                a specific attribute. The dataset is available in Excel
+                and CSV formats.
+            </p>
+        </section>
+
+        <section>
+            <h2>Why Did We Choose This Dataset?</h2>
+
+            <p>
+                We chose films because movie data is familiar and easy
+                to understand, making it suitable for demonstrating
+                basic data organisation and algorithm design.
+            </p>
+
+            <p>
+                The dataset contains 50 films from different release
+                periods and genres. This provides variety while keeping
+                the collection small enough to inspect and process
+                within the scope of our project.
+            </p>
+
+            <p>
+                We selected fields that could support practical tasks,
+                such as searching for a film by title, filtering films
+                by genre, and comparing their ratings. The dataset
+                structure was therefore designed around the types of
+                operations our Movie Tracker algorithm may perform.
+            </p>
+        </section>
+
+        <section>
+            <h2>Dataset Structure</h2>
+
+            <p>
+                The dataset contains six columns:
+            </p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Column</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>movie_id</td>
+                        <td>A unique identifier for each film.</td>
+                    </tr>
+                    <tr>
+                        <td>title</td>
+                        <td>The title of the film.</td>
+                    </tr>
+                    <tr>
+                        <td>director</td>
+                        <td>The director or directors.</td>
+                    </tr>
+                    <tr>
+                        <td>release_year</td>
+                        <td>The film's release year.</td>
+                    </tr>
+                    <tr>
+                        <td>genre</td>
+                        <td>The genre or genres assigned to the film.</td>
+                    </tr>
+                    <tr>
+                        <td>rating</td>
+                        <td>The numerical rating recorded for the film.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Data Validation and Limitations</h2>
+
+            <p>
+                We checked the dataset structure to confirm that it
+                contains 50 film records and six columns, with no
+                empty cells or duplicate IDs and titles. We also
+                checked that the CSV rows have a consistent number
+                of fields.
+            </p>
+
+            <p>
+                These checks confirm the structure of the files, but
+                they do not guarantee that every film detail or rating
+                is factually accurate. Ratings can vary between sources
+                and over time, so the source and date of verification
+                should be recorded when the ratings are checked.
+            </p>
+
+            <p>
+                Genre values may contain more than one genre in a
+                single field. This is useful for keeping the dataset
+                simple, but it means that genre filtering must account
+                for combined values.
+            </p>
+        </section>
+
+        <section>
+            <h2>Download the Dataset</h2>
+
+            <p>
+                The Excel file is convenient for viewing and editing
+                the data. The CSV file provides a simple tabular
+                format that can be read by Python.
+            </p>
+
+            <a class="download-link"
+               href="Movie_Tracker_50_Films_6_Columns.xlsx"
+               download>
+                Download Excel (.xlsx)
+            </a>
+
+            <a class="download-link"
+               href="Movie_Tracker_50_Films_6_Columns.csv"
+               download>
+                Download CSV (.csv)
+            </a>
+        </section>
+
+    </main>
+
+</body>
+</html>
