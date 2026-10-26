@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -106,7 +106,7 @@
 
 <body>
 
-    <!-- The navigation bar -->
+    <!-- Navigation bar -->
 
     <ul id="navigation">
         <li><a href="index.html">Homepage</a></li>
@@ -114,8 +114,6 @@
         <li><a href="algorithm.html">Algorithm</a></li>
         <li><a href="people.html">People</a></li>
     </ul>
-
-    <!-- Dataset information -->
 
     <h1>MOVIE RATINGS</h1>
     <h2>Our Dataset</h2>
@@ -126,10 +124,11 @@
             <h2>Dataset Overview</h2>
 
             <p>
-                Our project uses a dataset of 50 English-language films.
+                Our project uses a dataset of 50 films.
                 Each row represents one film, and each column describes
-                a specific attribute. The dataset is available in Excel
-                and CSV formats.
+                a specific attribute. The dataset is provided in Excel
+                and CSV formats. Both files use the same six-column
+                structure.
             </p>
         </section>
 
@@ -137,9 +136,9 @@
             <h2>Why Did We Choose This Dataset?</h2>
 
             <p>
-                We chose films because movie data is familiar and easy
+                We chose film data because it is familiar and easy
                 to understand, making it suitable for demonstrating
-                basic data organisation and algorithm design.
+                data organisation and algorithm design.
             </p>
 
             <p>
@@ -150,11 +149,11 @@
             </p>
 
             <p>
-                We selected fields that could support practical tasks,
+                The selected fields can support practical operations,
                 such as searching for a film by title, filtering films
                 by genre, and comparing their ratings. The dataset
-                structure was therefore designed around the types of
-                operations our Movie Tracker algorithm may perform.
+                structure can therefore be used by the Movie Tracker
+                algorithm to demonstrate these operations.
             </p>
         </section>
 
@@ -162,7 +161,7 @@
             <h2>Dataset Structure</h2>
 
             <p>
-                The dataset contains six columns:
+                The dataset contains 50 records and six columns:
             </p>
 
             <table>
@@ -183,7 +182,7 @@
                     </tr>
                     <tr>
                         <td>director</td>
-                        <td>The director or directors.</td>
+                        <td>The director or directors listed for the film.</td>
                     </tr>
                     <tr>
                         <td>release_year</td>
@@ -191,11 +190,11 @@
                     </tr>
                     <tr>
                         <td>genre</td>
-                        <td>The genre or genres assigned to the film.</td>
+                        <td>The genre or genres recorded for the film.</td>
                     </tr>
                     <tr>
                         <td>rating</td>
-                        <td>The numerical rating recorded for the film.</td>
+                        <td>The numerical rating recorded in the dataset.</td>
                     </tr>
                 </tbody>
             </table>
@@ -205,26 +204,25 @@
             <h2>Data Validation and Limitations</h2>
 
             <p>
-                We checked the dataset structure to confirm that it
-                contains 50 film records and six columns, with no
-                empty cells or duplicate IDs and titles. We also
-                checked that the CSV rows have a consistent number
-                of fields.
+                The dataset is organised into 50 film records and six
+                columns. The CSV and Excel files should use the same
+                column names and represent the same records so that
+                they can be used consistently.
             </p>
 
             <p>
-                These checks confirm the structure of the files, but
-                they do not guarantee that every film detail or rating
-                is factually accurate. Ratings can vary between sources
-                and over time, so the source and date of verification
-                should be recorded when the ratings are checked.
+                Structural checks can help identify missing values,
+                duplicate identifiers, and inconsistencies in the
+                file format. However, these checks do not guarantee
+                that every film detail or rating is factually accurate.
+                The source of the ratings should be documented if
+                the values are verified against an external source.
             </p>
 
             <p>
-                Genre values may contain more than one genre in a
-                single field. This is useful for keeping the dataset
-                simple, but it means that genre filtering must account
-                for combined values.
+                Some genre fields contain more than one genre,
+                separated by a slash. This keeps the dataset simple,
+                but genre filtering must account for combined values.
             </p>
         </section>
 
@@ -233,18 +231,19 @@
 
             <p>
                 The Excel file is convenient for viewing and editing
-                the data. The CSV file provides a simple tabular
-                format that can be read by Python.
+                the data. The CSV file is a plain tabular format that
+                can be read by Python and used by the Movie Tracker
+                algorithm.
             </p>
 
             <a class="download-link"
-               href="Movie_Tracker_50_Films_6_Columns.xlsx"
+               href="Movie_Dataset.xlsx"
                download>
                 Download Excel (.xlsx)
             </a>
 
             <a class="download-link"
-               href="Movie_Tracker_50_Films_6_Columns.csv"
+               href="Movie_Dataset.csv"
                download>
                 Download CSV (.csv)
             </a>
@@ -254,3 +253,4 @@
 
 </body>
 </html>
+```
