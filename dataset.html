@@ -4,174 +4,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <title>Dataset | Movie Ratings</title>
-
-    <!-- Link to the main stylesheet -->
+    
     <link rel="stylesheet" href="style.css">
-
-    <!-- Dataset page styling -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
-
-        .dataset-content {
-            max-width: 1000px;
-            margin: 30px auto;
-            padding: 20px;
-            color: rgb(246, 246, 162);
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.7;
-        }
-
-        .dataset-content h2 {
-            font-family: "Limelight", sans-serif;
-            font-size: 32px;
-            color: rgb(255, 174, 13);
-            text-align: left;
-            margin: 25px 0 10px;
-            padding: 10px 0;
-        }
-
-        .dataset-content p {
-            text-align: left;
-            font-size: 18px;
-            line-height: 1.7;
-            margin: 12px 0;
-        }
-
-        .dataset-content ul {
-            padding-left: 25px;
-            font-size: 18px;
-        }
-
-        .dataset-content li {
-            margin-bottom: 8px;
-        }
-
-        .dataset-content code {
-            color: rgb(255, 174, 13);
-        }
-
-        .dataset-content table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            background-color: #701f1f;
-        }
-
-        .dataset-content th,
-        .dataset-content td {
-            border: 1px solid rgb(255, 174, 13);
-            padding: 12px;
-            text-align: left;
-            color: rgb(246, 246, 162);
-        }
-
-        .dataset-content th {
-            color: rgb(255, 174, 13);
-            background-color: #8d0a0a;
-        }
-
-        .dataset-content .download-link {
-            display: inline-block;
-            background-color: #c6101c;
-            border: 1px dotted yellow;
-            border-radius: 8px;
-            padding: 12px 16px;
-            margin: 8px 8px 8px 0;
-            color: rgb(255, 174, 13);
-            text-decoration: none;
-        }
-
-        .dataset-content .download-link:hover {
-            background-color: #8d0a0a;
-        }
-
-        .dataset-content .table-wrapper {
-            overflow-x: auto;
-        }
-
-        @media (max-width: 600px) {
-            .dataset-content {
-                padding: 12px;
-            }
-
-            .dataset-content h2 {
-                font-size: 25px;
-            }
-
-            .dataset-content p,
-            .dataset-content ul {
-                font-size: 16px;
-            }
-
-            .dataset-content table {
-                font-size: 14px;
-            }
-
-            .dataset-content th,
-            .dataset-content td {
-                padding: 7px;
-                overflow-wrap: anywhere;
-            }
-        }
-    </style>
+    
 </head>
 
 <body>
 
-    <!-- Navigation bar -->
-    <ul id="navigation">
-        <li><a href="index.html">Homepage</a></li>
-        <li><a href="dataset.html">Dataset</a></li>
-        <li><a href="algorithm.html">Algorithm</a></li>
-        <li><a href="people.html">People</a></li>
-    </ul>
+    <header>
+        <h1>Movie Ratings</h1>
+        <p>Dataset Description</p>
+        
+    </header>
 
-    <h1>MOVIE RATINGS</h1>
-    <h2>Our Dataset</h2>
+    <nav>
+        <a href="index.html">Homepage</a>
+        <a href="dataset.html">Dataset</a>
+        <a href="algorithm.html">Algorithm</a>
+        <a href="people.html">People</a>
+    </nav>
 
-    <main class="dataset-content">
+    <main>
 
-        <!-- Section 1: Overview -->
         <section>
-            <h2>1. What the Dataset Describes</h2>
+            <h2>1. Dataset Overview</h2>
 
             <p>
-                This dataset contains a curated catalog of
-                <strong>50 feature films</strong> stored in
+                This dataset contains 50 films stored in
                 <code>Movie_Dataset.csv</code>. Each row represents
                 one film, and each column describes a specific
-                attribute used for organising and processing movie data.
+                attribute. The dataset is available in CSV and
+                Excel formats.
             </p>
         </section>
 
-        <!-- Section 2: Data Fields -->
         <section>
-            <h2>2. Data Fields &amp; Attributes</h2>
-
-            <p>The dataset contains the following six columns:</p>
-
-            <ul>
-                <li><strong>movie_id:</strong> Unique identifier for each film.</li>
-                <li><strong>title:</strong> The title of the movie.</li>
-                <li><strong>director:</strong> The director or directors listed for the film.</li>
-                <li><strong>release_year:</strong> The film's release year.</li>
-                <li><strong>genre:</strong> The genre or genres recorded for the film.</li>
-                <li><strong>rating:</strong> The numerical rating recorded in the dataset.</li>
-            </ul>
-        </section>
-
-        <!-- Section 3: Dataset Preview -->
-        <section>
-            <h2>3. Dataset Preview (First 5 Entries)</h2>
+            <h2>2. Why Did We Choose This Dataset?</h2>
 
             <p>
-                The following table provides a preview of the dataset.
-                It shows five example records and selected columns.
+                We chose film data because it is familiar and easy
+                to understand. It provides a practical example for
+                demonstrating data organisation and algorithm design.
             </p>
 
-            <div class="table-wrapper">
+            <p>
+                The collection contains films from different release
+                periods and genres. With 50 records, the dataset is
+                small enough to inspect and process within the scope
+                of our project.
+            </p>
+
+            <p>
+                The selected fields can support operations such as
+                searching for a film by title, filtering films by
+                genre, and comparing ratings.
+            </p>
+        </section>
+
+        <section>
+            <h2>3. Data Fields and Attributes</h2>
+
+            <p>
+                The dataset contains six columns:
+            </p>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Column</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>movie_id</td>
+                            <td>A unique identifier for each film.</td>
+                        </tr>
+                        <tr>
+                            <td>title</td>
+                            <td>The title of the film.</td>
+                        </tr>
+                        <tr>
+                            <td>director</td>
+                            <td>The director or directors listed for the film.</td>
+                        </tr>
+                        <tr>
+                            <td>release_year</td>
+                            <td>The film's release year.</td>
+                        </tr>
+                        <tr>
+                            <td>genre</td>
+                            <td>The genre or genres recorded for the film.</td>
+                        </tr>
+                        <tr>
+                            <td>rating</td>
+                            <td>The numerical rating recorded for the film.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>4. Dataset Preview</h2>
+
+            <p>
+                The following table shows five example records
+                and selected fields from the dataset.
+            </p>
+
+            <div class="table-wrap">
                 <table>
                     <thead>
                         <tr>
@@ -224,32 +170,57 @@
             </div>
         </section>
 
-        <!-- Section 4: Download -->
         <section>
-            <h2>4. Download the Dataset</h2>
+            <h2>5. Data Validation and Limitations</h2>
+
+            <p>
+                The dataset is intended to contain 50 film records
+                with six columns. The CSV and Excel files should
+                contain the same records and column names to ensure
+                consistent use in the project.
+            </p>
+
+            <p>
+                Structural checks can identify missing values,
+                duplicate identifiers, and formatting problems.
+                However, these checks do not guarantee that every
+                film detail or rating is factually accurate.
+            </p>
+
+            <p>
+                Some films may have more than one genre recorded
+                in the same field. Any genre filtering operation
+                must take this format into account.
+            </p>
+        </section>
+
+        <section>
+            <h2>6. Download the Dataset</h2>
 
             <p>
                 The Excel file is convenient for viewing and editing
-                the data. The CSV file is a plain tabular format that
-                can be read by Python and used by the Movie Tracker
-                algorithm.
+                the data. The CSV file can be read by Python and
+                used by the Movie Tracker algorithm.
             </p>
 
-            <a class="download-link"
-               href="Movie_Dataset.xlsx"
-               download>
-                Download Excel (.xlsx)
-            </a>
+            <p>
+                <a href="Movie_Dataset.xlsx" download>
+                    Download Excel Dataset (.xlsx)
+                </a>
+            </p>
 
-            <a class="download-link"
-               href="Movie_Dataset.csv"
-               download>
-                Download CSV (.csv)
-            </a>
+            <p>
+                <a href="Movie_Dataset.csv" download>
+                    Download CSV Dataset (.csv)
+                </a>
+            </p>
         </section>
 
     </main>
 
+    <footer>
+        <p>Movie Tracker Project</p>
+    </footer>
+
 </body>
 </html>
-``````</html>
