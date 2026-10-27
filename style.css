@@ -1,16 +1,20 @@
- body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; color: #222; }
+
+body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; color: #222; }
 header { background: #243447; color: white; text-align: center; padding: 25px; }
 header h1 { margin-bottom: 5px; }
 nav { background: #334d66; text-align: center; padding: 12px; }
 nav a { color: white; text-decoration: none; margin: 8px; display: inline-block; }
 nav a:hover { text-decoration: underline; }
 main { max-width: 900px; background: white; margin: 25px auto; padding: 25px; border-radius: 5px; box-sizing: border-box; }
-h2 { color: #243447; } h3 { margin-top: 25px; }
+h2 { color: #243447; } 
+h3 { margin-top: 25px; }
 table { border-collapse: collapse; width: 100%; margin-top: 15px; }
 th, td { border: 1px solid #ccc; padding: 9px; text-align: left; }
 th { background: #e1e9f0; }
 .table-wrap { overflow-x: auto; }
-input { padding: 9px; margin-top: 8px; } button { padding: 9px; margin: 5px; cursor: pointer; }
+input { padding: 9px; margin-top: 8px; } 
+button { padding: 9px; margin: 5px; cursor: pointer; }
 pre { background: #eeeeee; padding: 15px; white-space: pre-wrap; }
+img {width:100%; height: auto;}
 footer { text-align: center; color: #555; padding: 15px; }
 
