@@ -1,103 +1,15 @@
-
-/* This is the CSS file for the Movie Ratings project for group 7 */
-
-body {
-    background-color: rgb(93, 29, 29);
-}
-
-
-
-/* Headings */
-
-      h1, h2 {
-        font-family: "Limelight", sans-serif;
-        font-size: 60px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: rgb(255, 174, 13);
-        margin: 10px;
-        padding: 20px 10px;
-      }
-
-      h2 {
-        font-size: 40px;
-      }
-
-
-
-/* Text paragraph */
-
-      p {
-        font-size: 30px;
-        color: rgb(246, 246, 162);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family:Arial, Helvetica, sans-serif;
-        margin: 30px 10px;
-        padding: 20px 16px;
-      }
-
-
-
-/* Navigation */
-
-        ul#navigation {
-              list-style-type: none;
-              margin: 30px 10px;
-              padding: 14px 16px;
-              overflow: hidden;
-              background-color: #c6101c;
-              font-family: "Limelight", sans-serif;
-              font-weight: 400;
-              border-radius: 10px;
-              border-style: dotted;
-              border-color: yellow;
-            
-        }
-
-          ul#navigation li {
-              float: left;
-              align-items: center;
-          }
-
-          ul#navigation li a {
-              display: block;
-              color: rgb(255, 174, 13);
-              text-align: center;
-              padding: 14px 30px;
-              text-decoration: none;
-          }
-
-
-          #navigation li a:hover {
-              background-color: #8d0a0a;
-              border-radius: 10px
-          } 
-
-
-          
-  /* Responsive */  
-
-
-  @media (max-width: 600px) {
-    
-    h1 {
-      font-size: 40px;
-      align-items: center;
-    }
-
-    h2 {
-      font-size: 30px;
-      align-items: center;
-    }
-
-    p {
-      font-size: 20px;
-      margin: 10px;
-      padding: 10px 10px;
-  
-    }
-
-  }
+body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; color: #222; }
+header { background: #243447; color: white; text-align: center; padding: 25px; }
+header h1 { margin-bottom: 5px; }
+nav { background: #334d66; text-align: center; padding: 12px; }
+nav a { color: white; text-decoration: none; margin: 8px; display: inline-block; }
+nav a:hover { text-decoration: underline; }
+main { max-width: 900px; background: white; margin: 25px auto; padding: 25px; border-radius: 5px; box-sizing: border-box; }
+h2 { color: #243447; } h3 { margin-top: 25px; }
+table { border-collapse: collapse; width: 100%; margin-top: 15px; }
+th, td { border: 1px solid #ccc; padding: 9px; text-align: left; }
+th { background: #e1e9f0; }
+.table-wrap { overflow-x: auto; }
+input { padding: 9px; margin-top: 8px; } button { padding: 9px; margin: 5px; cursor: pointer; }
+pre { background: #eeeeee; padding: 15px; white-space: pre-wrap; }
+footer { text-align: center; color: #555; padding: 15px; }

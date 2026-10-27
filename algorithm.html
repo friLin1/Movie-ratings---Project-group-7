@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Our Algorithm - Group 7 Cinema</title>
+      <link rel="stylesheet" href="assets/css/style.css" />
+   </head>
+   <body>
+      <header>
+         <h1>Group 7 - Cinema</h1>
+         <p>Our Movie Tracker Project</p>
+      </header>
+      <nav>
+         <a href="index.html">Home</a>
+         <a href="dataset.html">Dataset</a>
+         <a href="algorithm.html">Algorithm</a>
+         <a href="motivation.html">Motivation</a>
+         <a href="people.html">Our Team</a>
+      </nav>
+      <main>
+         <h2>Our Algorithm</h2>
+         <p>
+            Our algorithm helps a user find movies from the dataset. The user
+            can type part of a movie title or genre. The program checks each
+            movie and shows matching results.
+         </p>
+         <h3>Try our simple movie search</h3>
+         <label for="search">Search by title or genre:</label>
+         <br />
+         <input id="search" type="text" placeholder="Example: Drama" />
+         <button onclick="searchMovies()">Search</button>
+         <button onclick="showAll()">Show all</button>
+         <p id="count"></p>
+         <div id="results"></div>
+         <p>
+            The algorithm looks at each movie one at a time. This is called a
+            linear search. It is simple and suitable for a dataset of 50 movies.
+         </p>
+         <script src="assets/scripts/movies.js"></script>
+      </main>
+      <footer><p>Group 7 - Cinema | Datalogical Thinking Project</p></footer>
+   </body>
+</html>
