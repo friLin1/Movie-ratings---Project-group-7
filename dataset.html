@@ -1,456 +1,64 @@
 <!DOCTYPE html>
-<html>
-   <head>
-      <title>Our Movie Dataset - Group 7 Cinema</title>
-      <link rel="stylesheet" href="assets/css/style.css" />
-   </head>
-   <body>
-      <header>
-         <h1>Group 7 - Cinema</h1>
-         <p>Our Movie Tracker Project</p>
-      </header>
-      <nav>
-         <a href="index.html">Home</a>
-         <a href="dataset.html">Dataset</a>
-         <a href="algorithm.html">Algorithm</a>
-         <a href="motivation.html">Motivation</a>
-         <a href="people.html">Our Team</a>
-      </nav>
-      <main>
-         <h2>Our Movie Dataset</h2>
-         <p>
-            We used a CSV file with
-            <strong>50 movies</strong>
-            . Each row represents one movie and each column tells us something
-            about it.
-         </p>
-         <p>
-            The six columns are: movie ID, title, director, release year, genre
-            and rating.
-         </p>
-         <p>
-            We kept the data in CSV format because it is easy to read in Excel
-            and simple for a program to process.
-         </p>
-         <h3>Our Movies</h3>
-         
-         <div class="table-wrap">
-            <table>
-               <thead>
-                  <tr>
-                     <th>ID</th>
-                     <th>Title</th>
-                     <th>Director</th>
-                     <th>Year</th>
-                     <th>Genre</th>
-                     <th>Rating</th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <tr>
-                     <td>1</td>
-                     <td>The Shawshank Redemption</td>
-                     <td>Frank Darabont</td>
-                     <td>1994</td>
-                     <td>Drama</td>
-                     <td>9.3</td>
-                  </tr>
-                  <tr>
-                     <td>2</td>
-                     <td>The Godfather</td>
-                     <td>Francis Ford Coppola</td>
-                     <td>1972</td>
-                     <td>Crime/Drama</td>
-                     <td>9.2</td>
-                  </tr>
-                  <tr>
-                     <td>3</td>
-                     <td>The Dark Knight</td>
-                     <td>Christopher Nolan</td>
-                     <td>2008</td>
-                     <td>Action/Crime</td>
-                     <td>9</td>
-                  </tr>
-                  <tr>
-                     <td>4</td>
-                     <td>Pulp Fiction</td>
-                     <td>Quentin Tarantino</td>
-                     <td>1994</td>
-                     <td>Crime/Drama</td>
-                     <td>8.9</td>
-                  </tr>
-                  <tr>
-                     <td>5</td>
-                     <td>The Lord of the Rings: The Return of the King</td>
-                     <td>Peter Jackson</td>
-                     <td>2003</td>
-                     <td>Fantasy/Adventure</td>
-                     <td>9</td>
-                  </tr>
-                  <tr>
-                     <td>6</td>
-                     <td>Schindler&#x27;s List</td>
-                     <td>Steven Spielberg</td>
-                     <td>1993</td>
-                     <td>Biography/Drama</td>
-                     <td>9</td>
-                  </tr>
-                  <tr>
-                     <td>7</td>
-                     <td>12 Angry Men</td>
-                     <td>Sidney Lumet</td>
-                     <td>1957</td>
-                     <td>Drama</td>
-                     <td>9</td>
-                  </tr>
-                  <tr>
-                     <td>8</td>
-                     <td>Inception</td>
-                     <td>Christopher Nolan</td>
-                     <td>2010</td>
-                     <td>Sci-Fi/Action</td>
-                     <td>8.8</td>
-                  </tr>
-                  <tr>
-                     <td>9</td>
-                     <td>Fight Club</td>
-                     <td>David Fincher</td>
-                     <td>1999</td>
-                     <td>Drama</td>
-                     <td>8.8</td>
-                  </tr>
-                  <tr>
-                     <td>10</td>
-                     <td>Forrest Gump</td>
-                     <td>Robert Zemeckis</td>
-                     <td>1994</td>
-                     <td>Drama/Romance</td>
-                     <td>8.8</td>
-                  </tr>
-                  <tr>
-                     <td>11</td>
-                     <td>The Matrix</td>
-                     <td>Lana Wachowski, Lilly Wachowski</td>
-                     <td>1999</td>
-                     <td>Sci-Fi/Action</td>
-                     <td>8.7</td>
-                  </tr>
-                  <tr>
-                     <td>12</td>
-                     <td>Goodfellas</td>
-                     <td>Martin Scorsese</td>
-                     <td>1990</td>
-                     <td>Crime/Drama</td>
-                     <td>8.7</td>
-                  </tr>
-                  <tr>
-                     <td>13</td>
-                     <td>Star Wars: Episode IV - A New Hope</td>
-                     <td>George Lucas</td>
-                     <td>1977</td>
-                     <td>Sci-Fi/Adventure</td>
-                     <td>8.6</td>
-                  </tr>
-                  <tr>
-                     <td>14</td>
-                     <td>The Silence of the Lambs</td>
-                     <td>Jonathan Demme</td>
-                     <td>1991</td>
-                     <td>Thriller/Crime</td>
-                     <td>8.6</td>
-                  </tr>
-                  <tr>
-                     <td>15</td>
-                     <td>Se7en</td>
-                     <td>David Fincher</td>
-                     <td>1995</td>
-                     <td>Crime/Thriller</td>
-                     <td>8.6</td>
-                  </tr>
-                  <tr>
-                     <td>16</td>
-                     <td>The Lord of the Rings: The Fellowship of the Ring</td>
-                     <td>Peter Jackson</td>
-                     <td>2001</td>
-                     <td>Fantasy/Adventure</td>
-                     <td>8.8</td>
-                  </tr>
-                  <tr>
-                     <td>17</td>
-                     <td>Star Wars: Episode V - The Empire Strikes Back</td>
-                     <td>Irvin Kershner</td>
-                     <td>1980</td>
-                     <td>Sci-Fi/Adventure</td>
-                     <td>8.7</td>
-                  </tr>
-                  <tr>
-                     <td>18</td>
-                     <td>The Lion King</td>
-                     <td>Roger Allers, Rob Minkoff</td>
-                     <td>1994</td>
-                     <td>Animation/Drama</td>
-                     <td>8.5</td>
-                  </tr>
-                  <tr>
-                     <td>19</td>
-                     <td>Back to the Future</td>
-                     <td>Robert Zemeckis</td>
-                     <td>1985</td>
-                     <td>Sci-Fi/Comedy</td>
-                     <td>8.5</td>
-                  </tr>
-                  <tr>
-                     <td>20</td>
-                     <td>Terminator 2: Judgment Day</td>
-                     <td>James Cameron</td>
-                     <td>1991</td>
-                     <td>Action/Sci-Fi</td>
-                     <td>8.6</td>
-                  </tr>
-                  <tr>
-                     <td>21</td>
-                     <td>The Avengers</td>
-                     <td>Joss Whedon</td>
-                     <td>2012</td>
-                     <td>Action/Adventure</td>
-                     <td>8</td>
-                  </tr>
-                  <tr>
-                     <td>22</td>
-                     <td>Interstellar</td>
-                     <td>Christopher Nolan</td>
-                     <td>2014</td>
-                     <td>Sci-Fi/Drama</td>
-                     <td>8.7</td>
-                  </tr>
-                  <tr>
-                     <td>23</td>
-                     <td>Django Unchained</td>
-                     <td>Quentin Tarantino</td>
-                     <td>2012</td>
-                     <td>Western/Drama</td>
-                     <td>8.5</td>
-                  </tr>
-                  <tr>
-                     <td>24</td>
-                     <td>Whiplash</td>
-                     <td>Damien Chazelle</td>
-                     <td>2014</td>
-                     <td>Drama/Music</td>
-                     <td>8.5</td>
-                  </tr>
-                  <tr>
-                     <td>25</td>
-                     <td>Spider-Man: No Way Home</td>
-                     <td>Jon Watts</td>
-                     <td>2021</td>
-                     <td>Action/Adventure</td>
-                     <td>8.2</td>
-                  </tr>
-                  <tr>
-                     <td>26</td>
-                     <td>1917</td>
-                     <td>Sam Mendes</td>
-                     <td>2019</td>
-                     <td>War/Drama</td>
-                     <td>8.2</td>
-                  </tr>
-                  <tr>
-                     <td>27</td>
-                     <td>Joker</td>
-                     <td>Todd Phillips</td>
-                     <td>2019</td>
-                     <td>Crime/Drama</td>
-                     <td>8.3</td>
-                  </tr>
-                  <tr>
-                     <td>28</td>
-                     <td>Avengers: Endgame</td>
-                     <td>Anthony Russo, Joe Russo</td>
-                     <td>2019</td>
-                     <td>Action/Adventure</td>
-                     <td>8.4</td>
-                  </tr>
-                  <tr>
-                     <td>29</td>
-                     <td>Tenet</td>
-                     <td>Christopher Nolan</td>
-                     <td>2020</td>
-                     <td>Action/Sci-Fi</td>
-                     <td>7.3</td>
-                  </tr>
-                  <tr>
-                     <td>30</td>
-                     <td>The Departed</td>
-                     <td>Martin Scorsese</td>
-                     <td>2006</td>
-                     <td>Crime/Thriller</td>
-                     <td>8.5</td>
-                  </tr>
-                  <tr>
-                     <td>31</td>
-                     <td>Gladiator</td>
-                     <td>Ridley Scott</td>
-                     <td>2000</td>
-                     <td>Action/Drama</td>
-                     <td>8.5</td>
-                  </tr>
-                  <tr>
-                     <td>32</td>
-                     <td>Avatar</td>
-                     <td>James Cameron</td>
-                     <td>2009</td>
-                     <td>Sci-Fi/Adventure</td>
-                     <td>7.9</td>
-                  </tr>
-                  <tr>
-                     <td>33</td>
-                     <td>Up</td>
-                     <td>Pete Docter, Bob Peterson</td>
-                     <td>2009</td>
-                     <td>Animation/Adventure</td>
-                     <td>8.3</td>
-                  </tr>
-                  <tr>
-                     <td>34</td>
-                     <td>WALL-E</td>
-                     <td>Andrew Stanton</td>
-                     <td>2008</td>
-                     <td>Animation/Sci-Fi</td>
-                     <td>8.4</td>
-                  </tr>
-                  <tr>
-                     <td>35</td>
-                     <td>Alien</td>
-                     <td>Ridley Scott</td>
-                     <td>1979</td>
-                     <td>Sci-Fi/Horror</td>
-                     <td>8.5</td>
-                  </tr>
-                  <tr>
-                     <td>36</td>
-                     <td>Titanic</td>
-                     <td>James Cameron</td>
-                     <td>1997</td>
-                     <td>Romance/Drama</td>
-                     <td>7.9</td>
-                  </tr>
-                  <tr>
-                     <td>37</td>
-                     <td>Gone with the Wind</td>
-                     <td>Victor Fleming</td>
-                     <td>1939</td>
-                     <td>Romance/Drama</td>
-                     <td>8.2</td>
-                  </tr>
-                  <tr>
-                     <td>38</td>
-                     <td>The Wizard of Oz</td>
-                     <td>Victor Fleming</td>
-                     <td>1939</td>
-                     <td>Fantasy/Musical</td>
-                     <td>8.1</td>
-                  </tr>
-                  <tr>
-                     <td>39</td>
-                     <td>The Godfather Part II</td>
-                     <td>Francis Ford Coppola</td>
-                     <td>1974</td>
-                     <td>Crime/Drama</td>
-                     <td>9</td>
-                  </tr>
-                  <tr>
-                     <td>40</td>
-                     <td>Mad Max: Fury Road</td>
-                     <td>George Miller</td>
-                     <td>2015</td>
-                     <td>Action/Sci-Fi</td>
-                     <td>8.1</td>
-                  </tr>
-                  <tr>
-                     <td>41</td>
-                     <td>Jurassic Park</td>
-                     <td>Steven Spielberg</td>
-                     <td>1993</td>
-                     <td>Adventure/Sci-Fi</td>
-                     <td>8.2</td>
-                  </tr>
-                  <tr>
-                     <td>42</td>
-                     <td>The Big Lebowski</td>
-                     <td>Joel Coen</td>
-                     <td>1998</td>
-                     <td>Comedy/Crime</td>
-                     <td>8.1</td>
-                  </tr>
-                  <tr>
-                     <td>43</td>
-                     <td>Memento</td>
-                     <td>Christopher Nolan</td>
-                     <td>2000</td>
-                     <td>Mystery/Thriller</td>
-                     <td>8.4</td>
-                  </tr>
-                  <tr>
-                     <td>44</td>
-                     <td>The Dark Knight Rises</td>
-                     <td>Christopher Nolan</td>
-                     <td>2012</td>
-                     <td>Action/Crime</td>
-                     <td>8.4</td>
-                  </tr>
-                  <tr>
-                     <td>45</td>
-                     <td>Avengers: Infinity War</td>
-                     <td>Anthony Russo, Joe Russo</td>
-                     <td>2018</td>
-                     <td>Action/Adventure</td>
-                     <td>8.4</td>
-                  </tr>
-                  <tr>
-                     <td>46</td>
-                     <td>Casablanca</td>
-                     <td>Michael Curtiz</td>
-                     <td>1942</td>
-                     <td>Romance/Drama</td>
-                     <td>8.5</td>
-                  </tr>
-                  <tr>
-                     <td>47</td>
-                     <td>Inside Out</td>
-                     <td>Pete Docter</td>
-                     <td>2015</td>
-                     <td>Animation/Comedy</td>
-                     <td>8.1</td>
-                  </tr>
-                  <tr>
-                     <td>48</td>
-                     <td>American Beauty</td>
-                     <td>Sam Mendes</td>
-                     <td>1999</td>
-                     <td>Drama</td>
-                     <td>8.3</td>
-                  </tr>
-                  <tr>
-                     <td>49</td>
-                     <td>La La Land</td>
-                     <td>Damien Chazelle</td>
-                     <td>2016</td>
-                     <td>Musical/Romance</td>
-                     <td>8</td>
-                  </tr>
-                  <tr>
-                     <td>50</td>
-                     <td>John Wick</td>
-                     <td>Chad Stahelski</td>
-                     <td>2014</td>
-                     <td>Action/Thriller</td>
-                     <td>7.4</td>
-                  </tr>
-               </tbody>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dataset Description</title>
+</head>
+<body>
+
+    <article>
+        <header>
+            <h1>Dataset Description</h1>
+        </header>
+
+        <!-- Section 1: Overview -->
+        <section>
+            <h2>1. What the Dataset Describes</h2>
+            <p>
+                This dataset contains a curated catalog of <strong>50 feature films</strong> stored in <code>Movie_Dataset.csv</code>. 
+                It provides structured metadata including titles, release years, genres, directors, and ratings for algorithmic processing.
+            </p>
+        </section>
+
+        <!-- Section 2: Data Fields -->
+        <section>
+            <h2>2. Data Fields & Attributes</h2>
+            <ul>
+                <li><strong>id:</strong> Unique numeric identifier (1–50).</li>
+                <li><strong>title:</strong> The official title of the movie.</li>
+                <li><strong>director:</strong> The primary director of the film.</li>
+                <li><strong>year:</strong> The release year.</li>
+                <li><strong>genre:</strong> The main cinematic genre.</li>
+                <li><strong>rating:</strong> The audience rating on a 10-point scale.</li>
+                <li><strong>runtime:</strong> Film duration in minutes.</li>
+            </ul>
+        </section>
+
+        <!-- Section 3: Dataset Sample (First 5 Entries) -->
+        <section>
+            <h2>3. Dataset Preview (First 5 Entries)</h2>
+            <p>Below is a short preview showing the structure of the dataset:</p>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Director</th>
+                        <th>Year</th>
+                        <th>Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>The Shawshank Redemption</td><td>Frank Darabont</td><td>1994</td><td>9.3</td></tr>
+                    <tr><td>2</td><td>The Godfather</td><td>Francis Ford Coppola</td><td>1972</td><td>9.2</td></tr>
+                    <tr><td>3</td><td>The Dark Knight</td><td>Christopher Nolan</td><td>2008</td><td>9.0</td></tr>
+                    <tr><td>4</td><td>Pulp Fiction</td><td>Quentin Tarantino</td><td>1994</td><td>8.9</td></tr>
+                    <tr><td>5</td><td>The Lord of the Rings: The Return of the King</td><td>Peter Jackson</td><td>2003</td><td>8.9</td></tr>
+                </tbody>
             </table>
-         </div>
-      </main>
-      <footer><p>Group 7 - Cinema | Datalogical Thinking Project</p></footer>
-   </body>
+        </section>
+    </article>
+
+</body>
 </html>
