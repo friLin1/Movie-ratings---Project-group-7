@@ -1,15 +1,107 @@
-body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; color: #222; }
-header { background: #243447; color: white; text-align: center; padding: 25px; }
-header h1 { margin-bottom: 5px; }
-nav { background: #334d66; text-align: center; padding: 12px; }
-nav a { color: white; text-decoration: none; margin: 8px; display: inline-block; }
-nav a:hover { text-decoration: underline; }
-main { max-width: 900px; background: white; margin: 25px auto; padding: 25px; border-radius: 5px; box-sizing: border-box; }
-h2 { color: #243447; } h3 { margin-top: 25px; }
-table { border-collapse: collapse; width: 100%; margin-top: 15px; }
-th, td { border: 1px solid #ccc; padding: 9px; text-align: left; }
-th { background: #e1e9f0; }
-.table-wrap { overflow-x: auto; }
-input { padding: 9px; margin-top: 8px; } button { padding: 9px; margin: 5px; cursor: pointer; }
-pre { background: #eeeeee; padding: 15px; white-space: pre-wrap; }
-footer { text-align: center; color: #555; padding: 15px; }
+    padding: 12px;
+    text-align: left;
+    color: rgb(246, 246, 162);
+}
+
+th {
+    background-color: #8d0a0a;
+    color: rgb(255, 174, 13);
+}
+
+.table-wrap,
+.table-wrapper {
+    overflow-x: auto;
+}
+
+/* Inputs and buttons */
+input {
+    padding: 9px;
+    margin-top: 8px;
+    border: 1px solid rgb(255, 174, 13);
+    border-radius: 4px;
+}
+
+button {
+    padding: 9px 14px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #c6101c;
+    color: rgb(246, 246, 162);
+    border: 1px dotted yellow;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #8d0a0a;
+}
+
+/* Code blocks */
+pre {
+    background-color: #4a1717;
+    color: rgb(246, 246, 162);
+    padding: 15px;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    border: 1px solid rgb(255, 174, 13);
+    border-radius: 5px;
+}
+
+code {
+    color: rgb(255, 174, 13);
+}
+
+/* Download links */
+.download-link {
+    display: inline-block;
+    background-color: #c6101c;
+    border: 1px dotted yellow;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 8px 8px 8px 0;
+    color: rgb(255, 174, 13);
+    text-decoration: none;
+}
+
+.download-link:hover {
+    background-color: #8d0a0a;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    color: rgb(246, 246, 162);
+    padding: 15px;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    #navigation li a,
+    nav a {
+        margin: 3px;
+        padding: 8px;
+    }
+
+    main,
+    article {
+        margin: 15px auto;
+        padding: 12px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 7px;
+        overflow-wrap: anywhere;
+    }
+}
