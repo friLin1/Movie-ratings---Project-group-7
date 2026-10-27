@@ -1,65 +1,233 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dataset Description</title>
+
+    <title>Dataset | Movie Ratings</title>
+
+    <!-- Link to the main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Dataset page styling -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+
+        .dataset-content {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+            color: rgb(246, 246, 162);
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+        }
+
+        .dataset-content h2 {
+            font-family: "Limelight", sans-serif;
+            font-size: 32px;
+            color: rgb(255, 174, 13);
+            text-align: left;
+            margin: 25px 0 10px;
+            padding: 10px 0;
+        }
+
+        .dataset-content p {
+            text-align: left;
+            font-size: 18px;
+            line-height: 1.7;
+            margin: 12px 0;
+        }
+
+        .dataset-content ul {
+            padding-left: 25px;
+            font-size: 18px;
+        }
+
+        .dataset-content li {
+            margin-bottom: 8px;
+        }
+
+        .dataset-content code {
+            color: rgb(255, 174, 13);
+        }
+
+        .dataset-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #701f1f;
+        }
+
+        .dataset-content th,
+        .dataset-content td {
+            border: 1px solid rgb(255, 174, 13);
+            padding: 12px;
+            text-align: left;
+            color: rgb(246, 246, 162);
+        }
+
+        .dataset-content th {
+            color: rgb(255, 174, 13);
+            background-color: #8d0a0a;
+        }
+
+        .dataset-content .download-link {
+            display: inline-block;
+            background-color: #c6101c;
+            border: 1px dotted yellow;
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin: 8px 8px 8px 0;
+            color: rgb(255, 174, 13);
+            text-decoration: none;
+        }
+
+        .dataset-content .download-link:hover {
+            background-color: #8d0a0a;
+        }
+
+        .dataset-content .table-wrapper {
+            overflow-x: auto;
+        }
+
+        @media (max-width: 600px) {
+            .dataset-content {
+                padding: 12px;
+            }
+
+            .dataset-content h2 {
+                font-size: 25px;
+            }
+
+            .dataset-content p,
+            .dataset-content ul {
+                font-size: 16px;
+            }
+
+            .dataset-content table {
+                font-size: 14px;
+            }
+
+            .dataset-content th,
+            .dataset-content td {
+                padding: 7px;
+                overflow-wrap: anywhere;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-    <article>
-        <header>
-            <h1>Dataset Description</h1>
-        </header>
+    <!-- Navigation bar -->
+    <ul id="navigation">
+        <li><a href="index.html">Homepage</a></li>
+        <li><a href="dataset.html">Dataset</a></li>
+        <li><a href="algorithm.html">Algorithm</a></li>
+        <li><a href="people.html">People</a></li>
+    </ul>
+
+    <h1>MOVIE RATINGS</h1>
+    <h2>Our Dataset</h2>
+
+    <main class="dataset-content">
 
         <!-- Section 1: Overview -->
         <section>
             <h2>1. What the Dataset Describes</h2>
+
             <p>
-                This dataset contains a curated catalog of <strong>50 feature films</strong> stored in <code>Movie_Dataset.csv</code>. 
-                It provides structured metadata including titles, release years, genres, directors, and ratings for algorithmic processing.
+                This dataset contains a curated catalog of
+                <strong>50 feature films</strong> stored in
+                <code>Movie_Dataset.csv</code>. Each row represents
+                one film, and each column describes a specific
+                attribute used for organising and processing movie data.
             </p>
         </section>
 
         <!-- Section 2: Data Fields -->
         <section>
-            <h2>2. Data Fields & Attributes</h2>
+            <h2>2. Data Fields &amp; Attributes</h2>
+
+            <p>The dataset contains the following six columns:</p>
+
             <ul>
-                <li><strong>id:</strong> Unique numeric identifier (1–50).</li>
-                <li><strong>title:</strong> The official title of the movie.</li>
-                <li><strong>director:</strong> The primary director of the film.</li>
-                <li><strong>year:</strong> The release year.</li>
-                <li><strong>genre:</strong> The main cinematic genre.</li>
-                <li><strong>rating:</strong> The audience rating on a 10-point scale.</li>
-                <li><strong>runtime:</strong> Film duration in minutes.</li>
+                <li><strong>movie_id:</strong> Unique identifier for each film.</li>
+                <li><strong>title:</strong> The title of the movie.</li>
+                <li><strong>director:</strong> The director or directors listed for the film.</li>
+                <li><strong>release_year:</strong> The film's release year.</li>
+                <li><strong>genre:</strong> The genre or genres recorded for the film.</li>
+                <li><strong>rating:</strong> The numerical rating recorded in the dataset.</li>
             </ul>
         </section>
 
-        <!-- Section 3: Dataset Sample (First 5 Entries) -->
+        <!-- Section 3: Dataset Preview -->
         <section>
             <h2>3. Dataset Preview (First 5 Entries)</h2>
-            <p>Below is a short preview showing the structure of the dataset:</p>
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Title</th>
-                        <th>Director</th>
-                        <th>Year</th>
-                        <th>Rating</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>1</td><td>The Shawshank Redemption</td><td>Frank Darabont</td><td>1994</td><td>9.3</td></tr>
-                    <tr><td>2</td><td>The Godfather</td><td>Francis Ford Coppola</td><td>1972</td><td>9.2</td></tr>
-                    <tr><td>3</td><td>The Dark Knight</td><td>Christopher Nolan</td><td>2008</td><td>9.0</td></tr>
-                    <tr><td>4</td><td>Pulp Fiction</td><td>Quentin Tarantino</td><td>1994</td><td>8.9</td></tr>
-                    <tr><td>5</td><td>The Lord of the Rings: The Return of the King</td><td>Peter Jackson</td><td>2003</td><td>8.9</td></tr>
-                </tbody>
-            </table>
+
+            <p>
+                The following table provides a preview of the dataset.
+                It shows five example records and selected columns.
+            </p>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Movie ID</th>
+                            <th>Title</th>
+                            <th>Director</th>
+                            <th>Release Year</th>
+                            <th>Rating</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>The Shawshank Redemption</td>
+                            <td>Frank Darabont</td>
+                            <td>1994</td>
+                            <td>9.3</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>The Godfather</td>
+                            <td>Francis Ford Coppola</td>
+                            <td>1972</td>
+                            <td>9.2</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>The Dark Knight</td>
+                            <td>Christopher Nolan</td>
+                            <td>2008</td>
+                            <td>9.0</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Pulp Fiction</td>
+                            <td>Quentin Tarantino</td>
+                            <td>1994</td>
+                            <td>8.9</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>The Lord of the Rings: The Return of the King</td>
+                            <td>Peter Jackson</td>
+                            <td>2003</td>
+                            <td>8.9</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
-           <section>
-            <h2>Download the Dataset</h2>
+
+        <!-- Section 4: Download -->
+        <section>
+            <h2>4. Download the Dataset</h2>
 
             <p>
                 The Excel file is convenient for viewing and editing
@@ -81,7 +249,8 @@
             </a>
         </section>
 
-    </article>
+    </main>
 
 </body>
 </html>
+```</html>
