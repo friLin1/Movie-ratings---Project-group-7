@@ -1,44 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Our Algorithm - Group 7 Cinema</title>
-      <link rel="stylesheet" href="assets/css/style.css" />
-   </head>
-   <body>
-      <header>
-         <h1>Group 7 - Cinema</h1>
-         <p>Our Movie Tracker Project</p>
-      </header>
-      <nav>
-         <a href="index.html">Home</a>
-         <a href="dataset.html">Dataset</a>
-         <a href="algorithm.html">Algorithm</a>
-         <a href="motivation.html">Motivation</a>
-         <a href="people.html">Our Team</a>
-      </nav>
-      <main>
-         <h2>Our Algorithm</h2>
-         <p>
-            Our algorithm helps a user find movies from the dataset. The user
-            can type part of a movie title or genre. The program checks each
-            movie and shows matching results.
-         </p>
-         <h3>Try our simple movie search</h3>
-         <label for="search">Search by title or genre:</label>
-         <br />
-         <input id="search" type="text" placeholder="Example: Drama" />
-         <button onclick="searchMovies()">Search</button>
-         <button onclick="showAll()">Show all</button>
-         <p id="count"></p>
-         <div id="results"></div>
-         <p>
-            The algorithm looks at each movie one at a time. This is called a
-            linear search. It is simple and suitable for a dataset of 50 movies.
-         </p>
-         <script src="assets/scripts/movies.js"></script>
-      </main>
-      <footer><p>Group 7 - Cinema | Datalogical Thinking Project</p></footer>
-   </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm Documentation - Group 7</title>
+</head>
+<body>
+
+    <!-- Header & Navigation Bar -->
+    <header>
+        <h1>Group 7 - Algorithm Documentation</h1>
+        <p>Movie Filtering & Selection Pipeline</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dataset.html">Dataset</a></li>
+                <li><a href="algorithm.html">Algorithm</a></li>
+                <li><a href="people.html">Team & Labor</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <article>
+        <!-- Section 1: Algorithm Purpose & Problem Definition -->
+        <section>
+            <h2>1. Purpose & Problem Definition</h2>
+            <p>
+                The primary goal of our algorithm (<code>movie_algorithm.py</code>) is to process a structured catalog of 50 English-language feature films (<code>Movie_Dataset.csv</code>) and extract high-performing titles that meet a specific quality threshold: a IMDb rating of <strong>8.5 or higher</strong>.
+            </p>
+            <p>
+                By automating this filtering process, the program transforms raw tabular data into a refined catalog of top-rated movies, demonstrating how computational logic directly serves data filtering objectives.
+            </p>
+        </section>
+
+        <!-- Section 2: Core Algorithmic Constructs -->
+        <section>
+            <h2>2. Core Algorithmic Constructs Used</h2>
+            <p>
+                Our implementation incorporates the three fundamental building blocks of algorithm design:
+            </p>
+            <ul>
+                <li>
+                    <strong>Sequence:</strong> The program executes statements in a logical, step-by-step linear order—starting from importing necessary libraries, loading the dataset, evaluating entries, and concluding with printed summaries.
+                </li>
+                <li>
+                    <strong>Iteration (Looping):</strong> A <code>for</code> loop iterates through all 50 movie records in the dataset to inspect each movie sequentially.
+                </li>
+                <li>
+                    <strong>Selection (Conditional Logic):</strong> An <code>if</code> statement (<code>if rating >= 8.5</code>) checks each film's rating to selectively store qualifying titles into a filtered list.
+                </li>
+            </ul>
+        </section>
+
+        <!-- Section 3: Python Code Implementation -->
+        <section>
+            <h2>3. Python Implementation (movie_algorithm.py)</h2>
+            <p>Below is the complete Python code written to execute our data filtering pipeline:</p>
+
+<pre><code>import csv
+
+# Step 1: Initialize lists to store data
+all_movies = []
+top_movies = []
+
+# Step 2: Read and load the CSV dataset
+with open('Movie_Dataset.csv', mode='r', encoding='utf-8') as file:
+    reader = csv.DictReader(file)
+    for row in reader:
+        all_movies.append(row)
+
+print("Starting the movie analysis...")
+
+# Step 3: Iterate through movies and apply conditional selection
+for movie in all_movies:
+    rating = float(movie['rating'])
+    if rating >= 8.5:
+        top_movies.append(movie['title'])
+
+# Step 4: Output the filtered results
+print("\nHere are the highly rated movies (8.5+):")
+for movie in top_movies:
+    print("- " + movie)
+
+# Step 5: Print summary count
+total_count = len(top_movies)
+print(f"\nTotal number of top-rated movies found: {total_count}")
+print("Analysis complete.")
+</code></pre>
+        </section>
+
+        <!-- Section 4: Step-by-Step Logic Breakdown -->
+        <section>
+            <h2>4. Step-by-Step Code Execution Breakdown</h2>
+            <ol>
+                <li>
+                    <strong>Library Import & List Setup:</strong> We import Python's native <code>csv</code> module and set up two empty lists (<code>all_movies</code> and <code>top_movies</code>).
+                </li>
+                <li>
+                    <strong>Data Reading:</strong> We use <code>csv.DictReader</code> to convert each row of <code>Movie_Dataset.csv</code> into a key-value dictionary for easy attribute access.
+                </li>
+                <li>
+                    <strong>Data Conversion & Selection:</strong> As the program loops over each record, it converts the text-based rating string into a floating-point number using <code>float()</code> and tests whether <code>rating &gt;= 8.5</code>.
+                </li>
+                <li>
+                    <strong>Output Generation:</strong> The qualifying movie titles are appended to <code>top_movies</code>, listed on the terminal, and tallied using <code>len()</code>.
+                </li>
+            </ol>
+        </section>
+    </article>
+
+    <footer>
+        <p>&copy; 2026 Datalogical Thinking &mdash; Group 7. Published via GitHub Pages.</p>
+    </footer>
+
+</body>
 </html>
